@@ -62,11 +62,14 @@ const useAuthForm = (isSignUp = false) => {
       const res = isSignUp
         ? await createUserWithEmailAndPassword(auth, data.email, data.password)
         : await signInWithEmailAndPassword(auth, data.email, data.password);
+      const entertainmentRes = await fetch('/data.json')
+      const entertainmentData = await entertainmentRes.json()
+      const bookmarked = entertainmentData.filter((el) => el.isBookmarked === true)
         if(isSignUp) {
             const user = res.user
             const userRef = doc(db, 'UserBookMrkData', user.uid)
             setDoc(userRef, {
-                bookmark: [],
+                bookmark: bookmarked,
                 imgUrl: ''
             })
         }

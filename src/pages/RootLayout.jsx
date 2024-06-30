@@ -4,7 +4,9 @@ import { Outlet } from "react-router-dom"
 
 function RootLayout() {
   return (
-    <Outlet />
+    <div className="bg-darkBlue">
+        <Outlet />
+    </div>
   )
 }
 
