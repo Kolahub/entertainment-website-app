@@ -6,7 +6,7 @@ import show from '../assets/eye-fill.svg';
 
 const AuthForm = ({ title, error, handleSubmit, passwordVisibility, togglePasswordVisibility, isSignUp }) => {
   return (
-    <div className="font-light max-w-full w-calc-custom sm:max-w-[500px] w-full mt-8 bg-semiDarkBlue rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="font-light max-w-full w-calc-custom sm:max-w-[500px] mt-8 bg-semiDarkBlue rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div className="p-8 w-full">
         <h1 className="text-4xl text-white ">{title}</h1>
         {error.errMsg && <p className="text-customRed pt-3">{error.errMsg}</p>}

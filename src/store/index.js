@@ -1,29 +1,26 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    bookmark: []
+    entertainmentData: [],
+    imgUrl: ''
 }
 
-const userBookmarkSlice = createSlice({
+const userEntertainmentSlice = createSlice({
     name: 'bookmark',
     initialState,
     reducers: {
-        getAll(state, action) {
-            state.bookmark = action.payload
+        getAllData(state, action) {
+            state.entertainmentData = action.payload
         },
 
-        addTo (state, action) {
-            state.bookmark.push(action.payload)
-        },
-
-        // removeFromBookmark(state, action) {
-
-        // }
+        updateImg(state, action) {
+            state.imgUrl = action.payload
+        }
     }
 })
 
-export const bookmarkActions = userBookmarkSlice.actions
+export const entertainmentDataActions = userEntertainmentSlice.actions
 
-const store = configureStore({ reducer: userBookmarkSlice.reducer })
+const store = configureStore({ reducer: userEntertainmentSlice.reducer })
 
 export default store

@@ -17,7 +17,8 @@ export default {
       },
 
       spacing: {
-        'calc-custom': 'calc(100% - 2rem)'
+        'calc-custom': 'calc(100% - 2rem)',
+        'calc-custom-2': 'calc(100vh - 12rem)',
       }
     },
   },
