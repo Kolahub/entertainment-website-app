@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "/assets/logo.svg";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { app } from "../firebase/firebase";
 import { doc, getFirestore, onSnapshot, updateDoc } from "firebase/firestore";
-import personIcon from '../assets/person-square.svg';
+import personIcon from '/assets/person-square.svg';
 import { useDispatch, useSelector } from "react-redux";
 import { entertainmentDataActions } from '../store';
 
@@ -69,7 +69,7 @@ function Sidebar() {
   return (
     <aside className="h-full">
       <div className="w-full lg:h-screen sm:p-6 lg:p-8">
-        <div className="h-full flex flex-row lg:flex-col gap-14 justify-between lg:justify-normal items-center bg-semiDarkBlue sm:rounded-xl px-8 lg:px-0 py-8 w-full lg:w-24">
+        <div className="h-full flex flex-row lg:flex-col gap-5 sm:gap-14 justify-between lg:justify-normal items-center bg-semiDarkBlue sm:rounded-xl px-8 lg:px-0 py-8 w-full lg:w-24">
           <img src={logo} alt="Logo" className="" />
           <div className="flex flex-row lg:flex-col gap-8 items-center">
             <NavLink

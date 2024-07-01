@@ -2,7 +2,8 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     entertainmentData: [],
-    imgUrl: ''
+    searchQuery: '',
+    imgUrl: '',
 }
 
 const userEntertainmentSlice = createSlice({
@@ -11,6 +12,10 @@ const userEntertainmentSlice = createSlice({
     reducers: {
         getAllData(state, action) {
             state.entertainmentData = action.payload
+        },
+
+        updateSearchQuery(state, action) {
+            state.searchQuery = action.payload
         },
 
         updateImg(state, action) {

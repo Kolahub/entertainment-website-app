@@ -1,8 +1,8 @@
 // import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
 import { NavLink } from 'react-router-dom';
-import hide from '../assets/eye-slash-fill.svg';
-import show from '../assets/eye-fill.svg';
+import hide from '/assets/eye-slash-fill.svg';
+import show from '/assets/eye-fill.svg';
 
 const AuthForm = ({ title, error, handleSubmit, passwordVisibility, togglePasswordVisibility, isSignUp }) => {
   return (
