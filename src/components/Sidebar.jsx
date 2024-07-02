@@ -66,6 +66,10 @@ function Sidebar() {
     }
   }
 
+  function handleClickNav () {
+    dispatch(entertainmentDataActions.updateSearchQuery(''))
+  }
+
   return (
     <aside className="h-full">
       <div className="w-full lg:h-screen sm:p-6 lg:p-8">
@@ -80,6 +84,7 @@ function Sidebar() {
                   ? "fill-white"
                   : "hover:fill-customRed fill-greyishBlue"
               }
+              onClick={handleClickNav}
             >
               <svg
                 width="20"
@@ -98,6 +103,7 @@ function Sidebar() {
                   ? "fill-white"
                   : "hover:fill-customRed fill-greyishBlue"
               }
+              onClick={handleClickNav}
             >
               <svg
                 width="20"
@@ -116,6 +122,7 @@ function Sidebar() {
                   ? "fill-white"
                   : "hover:fill-customRed fill-greyishBlue"
               }
+              onClick={handleClickNav}
             >
               <svg
                 width="20"
@@ -134,6 +141,7 @@ function Sidebar() {
                   ? "fill-white"
                   : "hover:fill-customRed fill-greyishBlue"
               }
+              onClick={handleClickNav}
             >
               <svg
                 width="17"
